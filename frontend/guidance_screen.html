@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAAL AI — Guidance &amp; Sacred Contemplation</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#dde2f7",
+            "on-secondary-container": "#774d00",
+            "inverse-primary": "#c1c6db",
+            "surface-dim": "#dbdad7",
+            "surface-container-high": "#eae8e5",
+            "on-primary-container": "#7e8397",
+            "on-surface-variant": "#45464c",
+            "tertiary": "#000000",
+            "surface": "#fbf9f6",
+            "on-secondary-fixed": "#291800",
+            "outline": "#76777d",
+            "secondary": "#825500",
+            "secondary-container": "#ffc16a",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#151b2b",
+            "primary": "#000000",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#30312f",
+            "on-secondary-fixed-variant": "#633f00",
+            "surface-variant": "#e4e2df",
+            "secondary-fixed": "#ffddb4",
+            "on-tertiary-container": "#c56b52",
+            "tertiary-fixed-dim": "#ffb5a1",
+            "on-tertiary-fixed-variant": "#79301c",
+            "secondary-fixed-dim": "#f9bb65",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#414658",
+            "tertiary-fixed": "#ffdbd1",
+            "tertiary-container": "#3b0800",
+            "on-background": "#1b1c1a",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "surface-container": "#efeeeb",
+            "surface-bright": "#fbf9f6",
+            "primary-container": "#151b2b",
+            "primary-fixed-dim": "#c1c6db",
+            "surface-container-highest": "#e4e2df",
+            "surface-tint": "#585e70",
+            "outline-variant": "#c6c6cd",
+            "surface-container-low": "#f5f3f0",
+            "on-tertiary-fixed": "#3b0800",
+            "background": "#fbf9f6",
+            "inverse-on-surface": "#f2f0ed",
+            "on-surface": "#1b1c1a",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-md": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-md": "2rem",
+            "margin-lg": "4rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter-lg": "2rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "quote-editorial": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "quote-editorial": ["20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    /* Gentle breath pulse for contemplative focus */
+    @keyframes subtleBreath {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.002); }
+    }
+    .contemplative-breath {
+      animation: subtleBreath 6s ease-in-out infinite;
+    }
+
+    /* Candlelight ambient shadow */
+    .candlelight-shadow {
+      box-shadow: 0 4px 20px -2px rgba(26, 20, 16, 0.04), 0 1px 3px 0 rgba(26, 20, 16, 0.02);
+    }
+    .candlelight-card-floating {
+      box-shadow: 0 12px 32px -4px rgba(18, 27, 47, 0.06), 0 4px 12px -2px rgba(212, 155, 72, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen pb-28">
+<!-- TOP APP BAR (Shared Components Tokenized Execution) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-gutter-md md:px-margin-md h-16 w-full max-w-7xl mx-auto bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-0.5 bg-surface-container">
+<img alt="KAAL AI Wordmark and Emblem" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UtifwEzwv8b_LXHXogTdIisDgjfhgfKaWhF-4P-TM3p2f4laR16t75k4sBu94uhLMplPm47zB3Yby5rAAJtqBBankH0RjBMMUfdCeTRXHAmJDCpaEdSuwOyNGnNwKnhfmBO7V9ymSysP5eEt7cum64bSxLzcqiXq1LJFgfMV_6yz-7wA_ftbXSrzAShKtJj4x9Q3iZv6_nhBfivlJPAAEed3Kg_NOh1jEju6zrqzAOpJperI9AtC1opLI"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-medium tracking-tight text-on-surface leading-none">KAAL AI</span>
+<span class="text-[9px] tracking-widest uppercase font-label-sm text-secondary font-bold">Vedic Intelligence</span>
+</div>
+</div>
+<!-- Active State & Action -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>Space of Stillness</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface hover:text-secondary font-label-md text-label-md transition-colors active:scale-95 duration-150" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">add</span>
+<span>New Reflection</span>
+</button>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="w-full max-w-3xl mx-auto px-margin pt-20 md:pt-24 space-y-space-xl">
+<!-- SUBTLE SACRED WELCOME HERO -->
+<section class="text-center pt-space-md space-y-space-xs">
+<div class="inline-flex items-center justify-center p-2 rounded-full bg-surface-container-low mb-1">
+<span class="material-symbols-outlined text-secondary text-2xl" data-weight="fill">spa</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-medium text-on-surface tracking-tight">
+        What is on your mind?
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+        Share a confusion, career decision, emotional struggle, or personal crossroad.
+      </p>
+</section>
+<!-- PROMPTS SELECTION (Pills) -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Contemplative Seeds</span>
+<span class="text-[11px] text-secondary font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+          Tap to reflect
+        </span>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low border border-outline-variant/30 hover:border-secondary-container hover:bg-surface-container text-on-surface-variant font-body-sm text-body-sm text-left transition-all duration-150 active:scale-95" onclick="setPrompt(this.innerText)" type="button">
+          "I'm uncertain about my career direction..."
+        </button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low border border-outline-variant/30 hover:border-secondary-container hover:bg-surface-container text-on-surface-variant font-body-sm text-body-sm text-left transition-all duration-150 active:scale-95" onclick="setPrompt(this.innerText)" type="button">
+          "I am afraid of failing in my new endeavor..."
+        </button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low border border-outline-variant/30 hover:border-secondary-container hover:bg-surface-container text-on-surface-variant font-body-sm text-body-sm text-left transition-all duration-150 active:scale-95" onclick="setPrompt(this.innerText)" type="button">
+          "I feel overwhelmed and cannot find calm..."
+        </button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container-low border border-outline-variant/30 hover:border-secondary-container hover:bg-surface-container text-on-surface-variant font-body-sm text-body-sm text-left transition-all duration-150 active:scale-95" onclick="setPrompt(this.innerText)" type="button">
+          "I need clarity on a difficult relationship conversation..."
+        </button>
+</div>
+</section>
+<!-- INTERACTIVE INPUT CARD / BREATHING QUERY NODE -->
+<section class="candlelight-shadow rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-space-md md:p-space-lg space-y-space-md relative overflow-hidden transition-all duration-300 focus-within:border-secondary/50 focus-within:ring-2 focus-within:ring-secondary/15">
+<!-- Saffron aura glow background -->
+<div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-secondary-fixed-dim/20 blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">edit_note</span>
+<span class="font-label-md text-label-md text-on-surface">Your Inquiry</span>
+</div>
+<div class="flex items-center gap-1.5 text-outline text-[12px] font-label-sm">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary/70"></span>
+<span>Breathe gently</span>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low/60 border border-transparent rounded-xl p-space-md font-body-md text-body-md text-on-surface placeholder:text-outline/70 focus:outline-none focus:bg-surface-container-lowest focus:border-secondary/40 transition-all resize-none leading-relaxed" id="guidanceInput" placeholder="Speak honestly without judgment. Kaal reads intention, not grammar..." rows="4">I've been feeling deeply anxious about leaving my stable job to build something of my own. Fear of failure keeps paralyzing me.</textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline self-start sm:self-center">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span id="charCount">118 characters</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary/90">2 min contemplation</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-3 rounded-full bg-primary text-surface font-label-md text-label-md hover:scale-[1.01] active:scale-95 shadow-md shadow-secondary/10 transition-all duration-150" type="button">
+<span>Seek Guidance</span>
+<span class="material-symbols-outlined text-sm text-secondary-fixed">east</span>
+</button>
+</div>
+</section>
+<!-- SACRED DIVIDER -->
+<div class="flex items-center justify-center gap-3 py-1 opacity-70">
+<div class="h-[1px] w-16 bg-gradient-to-r from-transparent to-secondary/40"></div>
+<span class="material-symbols-outlined text-secondary text-sm">all_inclusive</span>
+<div class="h-[1px] w-16 bg-gradient-to-l from-transparent to-secondary/40"></div>
+</div>
+<!-- STRUCTURED KAAL AI RESPONSE VIEW -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex p-1 rounded-md bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-base">local_fire_department</span>
+</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Vedic Illumination</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Answered Just Now</span>
+</div>
+<!-- User's Inquired Context Card -->
+<div class="rounded-xl bg-surface-container p-space-md border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5 text-lg">psychology_alt</span>
+<div class="space-y-0.5">
+<p class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Inquired Crossroad</p>
+<p class="font-body-md text-body-md text-on-surface font-medium italic">
+            "I've been feeling deeply anxious about leaving my stable job to build something of my own. Fear of failure keeps paralyzing me."
+          </p>
+</div>
+</div>
+<!-- 4-PART KAAL AI STRUCTURE -->
+<div class="space-y-space-md">
+<!-- PART 1: REFLECTION -->
+<div class="candlelight-shadow rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-space-md md:p-space-lg space-y-space-xs transition hover:border-outline-variant">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>1. Reflection</span>
+</div>
+<h3 class="font-headline-md text-[19px] text-on-surface pt-1">The Illusion of Absolute Security</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            You are experiencing the ancient tension between security and dharma. The mind naturally clings to the known shore, confusing stillness with stagnation.
+          </p>
+</div>
+<!-- PART 2: WISDOM (Parchment Card with Gold Trim & Lotus Motif) -->
+<div class="candlelight-card-floating rounded-2xl bg-[#FCFAF5] border border-secondary/40 p-space-md md:p-space-lg relative overflow-hidden space-y-space-sm">
+<!-- Gilded hairline framing -->
+<div class="absolute inset-x-4 top-0 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+<span>2. Sacred Wisdom</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/40 px-2.5 py-0.5 rounded-full">
+              Bhagavad Gita 2.47
+            </span>
+</div>
+<!-- Sanskrit Sutra Block -->
+<div class="text-center py-space-sm space-y-1">
+<p class="font-display-lg-mobile md:font-display-lg text-2xl md:text-3xl text-primary font-normal tracking-wide text-on-surface">
+              कर्मण्येवाधिकारस्ते मा फलेषु कदाचन |
+            </p>
+<p class="text-xs text-secondary/80 tracking-widest font-label-sm uppercase">Karmanye Vadhikaraste Ma Phaleshu Kadachana</p>
+</div>
+<!-- English Translation & Interpretation -->
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface border-l-2 border-secondary/60 pl-4 py-1 italic leading-relaxed">
+            "You have a rightful claim only to the work, never to its fruits. Do not let the fruits of action be your motive, nor be attached to inaction."
+          </blockquote>
+</div>
+<!-- PART 3: IN YOUR SITUATION -->
+<div class="candlelight-shadow rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-space-md md:p-space-lg space-y-space-xs transition hover:border-outline-variant">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>3. In Your Situation</span>
+</div>
+<h3 class="font-headline-md text-[19px] text-on-surface pt-1">Decoupling Worth from Outcome</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Your anxiety stems from projecting into an uncertain future. When your mind measures success solely by external validation, fear governs you. Reframe this step not as a test of your worth, but as your sincere offering of effort.
+          </p>
+</div>
+<!-- PART 4: YOUR NEXT STEP (Highlighted Gold-Accent Card) -->
+<div class="rounded-2xl bg-surface-container-low border-2 border-secondary/40 p-space-md md:p-space-lg space-y-space-sm relative">
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>4. Your Next Step</span>
+</div>
+<p class="font-body-lg text-body-lg font-medium text-on-surface leading-relaxed">
+            Write down the three foundational tasks you can control this week. Commit to executing them with full devotion, releasing the outcome to time (Kaal).
+          </p>
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm font-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-full border border-secondary flex items-center justify-center text-[10px] text-secondary font-bold">1</span>
+<span>Define your minimum financial runway with exact numbers.</span>
+</div>
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm font-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-full border border-secondary flex items-center justify-center text-[10px] text-secondary font-bold">2</span>
+<span>Dedicate 45 minutes of dawn solely to building without checking metrics.</span>
+</div>
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-body-sm font-body-sm text-on-surface">
+<span class="w-5 h-5 rounded-full border border-secondary flex items-center justify-center text-[10px] text-secondary font-bold">3</span>
+<span>Perform a quiet surrender ritual: offer the result to the cosmos.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RESPONSE ACTION BAR -->
+<div class="p-space-md rounded-2xl bg-surface-container border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-base">self_improvement</span>
+<span>Take a moment with this.</span>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-secondary text-on-surface font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[17px]">bookmark_border</span>
+<span>Save Reflection</span>
+</button>
+<button class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-secondary text-on-surface font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[17px]">share</span>
+<span>Share</span>
+</button>
+<button class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-primary text-surface font-label-md text-label-md hover:bg-on-surface active:scale-95 transition-all" onclick="focusInput()" type="button">
+<span class="material-symbols-outlined text-[17px] text-secondary-fixed">replay</span>
+<span>Ask Another Question</span>
+</button>
+</div>
+</div>
+</section>
+<!-- FOOTER (Shared Component Exact Compliance) -->
+<footer class="w-full py-space-xl px-gutter-md md:px-margin-lg flex flex-col items-center justify-center gap-space-md text-center max-w-7xl mx-auto border-t border-outline-variant/40 bg-surface-container-low rounded-2xl mt-12 mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">spa</span>
+<span class="font-headline-md text-headline-md text-on-surface">KAAL AI</span>
+</div>
+<p class="font-quote-editorial text-quote-editorial italic text-on-surface-variant max-w-md">
+        "Time matures all things. Let the action be pure."
+      </p>
+<div class="flex flex-wrap justify-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary transition-colors duration-200" href="#sutras">Sutras</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#philosophy">Philosophy</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#meditation">Meditation</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#privacy">Privacy</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#terms">Terms</a>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+        © 2025 KAAL AI. Ancient wisdom. Modern clarity.
+      </p>
+</footer>
+</main>
+<!-- FIXED BOTTOM NAVIGATION BAR (Mobile Dock - Shared Components Semantic Alignment) -->
+<!-- Active state lock: "Guidance" is the current active screen destination -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-2 md:hidden bg-surface/90 backdrop-blur-lg shadow-[0_-4px_20px_-2px_rgba(26,20,16,0.04)]">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:text-secondary active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl">temple_hindu</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<!-- Guidance (Active Destination Lock) -->
+<a class="flex flex-col items-center justify-center text-secondary font-bold py-1 active:scale-90 transition-transform duration-150" href="#guidance">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-sm text-label-sm mt-0.5">Guidance</span>
+</a>
+<!-- History (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:text-secondary active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl">history_edu</span>
+<span class="font-label-sm text-label-sm mt-0.5">History</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:text-secondary active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- Client-side Interactive Logic -->
+<script>
+    const textarea = document.getElementById('guidanceInput');
+    const charCounter = document.getElementById('charCount');
+
+    function updateCount() {
+      if (textarea && charCounter) {
+        charCounter.textContent = `${textarea.value.length} characters`;
+      }
+    }
+
+    function setPrompt(text) {
+      if (textarea) {
+        // Strip quotes if present
+        textarea.value = text.replace(/^"|"$/g, '');
+        updateCount();
+        textarea.focus();
+        textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function focusInput() {
+      if (textarea) {
+        textarea.value = '';
+        updateCount();
+        textarea.focus();
+        textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    if (textarea) {
+      textarea.addEventListener('input', updateCount);
+    }
+  </script>
+</body></html>

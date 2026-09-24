@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAAL AI — Ancient wisdom. Modern clarity.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#dde2f7",
+            "on-secondary-container": "#774d00",
+            "inverse-primary": "#c1c6db",
+            "surface-dim": "#dbdad7",
+            "surface-container-high": "#eae8e5",
+            "on-primary-container": "#7e8397",
+            "on-surface-variant": "#45464c",
+            "tertiary": "#000000",
+            "surface": "#fbf9f6",
+            "on-secondary-fixed": "#291800",
+            "outline": "#76777d",
+            "secondary": "#825500",
+            "secondary-container": "#ffc16a",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#151b2b",
+            "primary": "#000000",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#30312f",
+            "on-secondary-fixed-variant": "#633f00",
+            "surface-variant": "#e4e2df",
+            "secondary-fixed": "#ffddb4",
+            "on-tertiary-container": "#c56b52",
+            "tertiary-fixed-dim": "#ffb5a1",
+            "on-tertiary-fixed-variant": "#79301c",
+            "secondary-fixed-dim": "#f9bb65",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#414658",
+            "tertiary-fixed": "#ffdbd1",
+            "tertiary-container": "#3b0800",
+            "on-background": "#1b1c1a",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "surface-container": "#efeeeb",
+            "surface-bright": "#fbf9f6",
+            "primary-container": "#151b2b",
+            "primary-fixed-dim": "#c1c6db",
+            "surface-container-highest": "#e4e2df",
+            "surface-tint": "#585e70",
+            "outline-variant": "#c6c6cd",
+            "surface-container-low": "#f5f3f0",
+            "on-tertiary-fixed": "#3b0800",
+            "background": "#fbf9f6",
+            "inverse-on-surface": "#f2f0ed",
+            "on-surface": "#1b1c1a",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-md": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-md": "2rem",
+            "margin-lg": "4rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter-lg": "2rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "quote-editorial": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "display-lg-mobile": ["34px", {"lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+            "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500"}],
+            "quote-editorial": ["20px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes breatheSlow {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    .animate-breathe {
+      animation: breatheSlow 7s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed pb-24 md:pb-0">
+<!-- Top Navigation (Shared TopAppBar) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-gutter-md md:px-margin-md h-16 w-full max-w-7xl mx-auto bg-surface/80 dark:bg-surface-container-lowest/80 backdrop-blur-md shadow-sm border-b border-outline-variant/30 dark:border-outline/20">
+<div class="flex items-center gap-2.5">
+<img alt="KAAL AI Wordmark and Emblem" class="w-8 h-8 rounded-md object-contain shadow-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1UtifwEzwv8b_LXHXogTdIisDgjfhgfKaWhF-4P-TM3p2f4laR16t75k4sBu94uhLMplPm47zB3Yby5rAAJtqBBankH0RjBMMUfdCeTRXHAmJDCpaEdSuwOyNGnNwKnhfmBO7V9ymSysP5eEt7cum64bSxLzcqiXq1LJFgfMV_6yz-7wA_ftbXSrzAShKtJj4x9Q3iZv6_nhBfivlJPAAEed3Kg_NOh1jEju6zrqzAOpJperI9AtC1opLI"/>
+<a class="font-headline-md text-headline-md font-medium tracking-tight text-on-surface dark:text-on-surface flex items-center gap-1.5" href="#">
+        KAAL AI
+      </a>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#philosophy">Philosophy</a>
+<a class="text-on-surface-variant dark:text-outline text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#guidance">How It Works</a>
+<a class="text-on-surface-variant dark:text-outline text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#themes">Dilemmas</a>
+<a class="text-on-surface-variant dark:text-outline text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#reflection">Sutras</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-label-md shadow-sm hover:opacity-90 active:scale-95 transition-all duration-150" href="#reflect-form">
+<span class="material-symbols-outlined text-[16px]">spa</span>
+<span>Seek Guidance</span>
+</a>
+</div>
+</header>
+<!-- Hero Section with Dawn Imagery -->
+<section class="relative min-h-[92vh] md:min-h-screen flex items-center justify-center pt-20 pb-16 px-gutter-md md:px-margin-lg overflow-hidden">
+<!-- Atmospheric Visual Layer -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center md:bg-bottom scale-105 transform duration-1000 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCFo29lTMW12UvWkCRWUyNtH1VuC9btkzyYDKeTie6NibOtB2o3EBVspTDOTfAu9AwdzuviCPalaExUrEapMJh6mwMp70053Dg4oO-WsLow0mDJwOgd7opNpGEOEH-kFScn993DRI_z0Ex3CF4L0ZHcjAPm5-oorkEiHLW6NXde6VkpCeEPIqVFtzfO-g-_iIXskehTRhM-Fl5oKCr5YEGFk93M0RlwxHKxNu0J3eou1wbEnE84adG')"></div>
+<!-- Layered Vignettes for Contemplative Dawn Atmosphere -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#0D1322]/90 via-[#0D1322]/65 to-[#fbf9f6]"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,155,72,0.18)_0%,rgba(13,19,34,0)_70%)]"></div>
+</div>
+<!-- Sacred Golden Dust / Ambient Halo -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none animate-breathe"></div>
+<!-- Hero Content -->
+<div class="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
+<!-- Sacred Lotus Monogram / Subtitle Flag -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 shadow-xs mb-6">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-label-sm font-label-sm text-secondary tracking-widest uppercase">Ancient wisdom. Modern clarity.</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-tertiary drop-shadow-sm font-medium tracking-tight mb-4 text-balance">
+        Bring what is on your mind. <br class="hidden sm:inline"/>
+<span class="italic font-normal text-secondary-fixed">Find a clearer way forward.</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-container-low/90 max-w-xl mb-9 leading-relaxed font-light">
+        A contemplative space inspired by timeless Gita principles, guiding modern dilemmas with stillness and clarity.
+      </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-md text-label-md shadow-[0_4px_20px_-2px_rgba(26,20,16,0.1)] active:scale-95 transition-all duration-150 group border border-outline-variant/30" href="#reflect-form">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_fire_department</span>
+<span>Seek Guidance</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-0.5 transition-transform text-[16px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface/30 hover:bg-surface/50 text-surface-container-lowest backdrop-blur-md border border-surface-container-lowest/30 font-label-md text-label-md active:scale-95 transition-all duration-150" href="#guidance">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Explore KAAL AI</span>
+</a>
+</div>
+<!-- Meditative micro-cue -->
+<div class="mt-12 flex items-center gap-3 text-surface-container-high/70 text-body-sm font-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span>Completely anonymous • Quiet sanctuary • Zero judgment</span>
+</div>
+</div>
+</section>
+<!-- Section 1: Three Sequential Steps -->
+<section class="py-space-xl px-gutter-md md:px-margin-lg max-w-6xl mx-auto" id="guidance">
+<div class="text-center max-w-xl mx-auto mb-12">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-2">The Path of Stillness</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium mb-3">
+        Pause. Reflect. Move Forward.
+      </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+        Three intentional moments to transition from mental noise into sacred, grounded direction.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 01 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-headline-md text-secondary/40 font-normal">01</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2.5">
+            Share what's on your mind
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Bring career uncertainty, fear, relationships, or heavy decisions into a safe, patient space without restraint.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] mr-1.5">self_improvement</span>
+<span>Unburden your thought stream</span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-lowest border border-secondary/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div class="absolute -top-3 right-6 bg-secondary text-on-secondary px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase">
+          Vedic Synthesis
+        </div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-headline-md text-secondary font-normal">02</span>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2.5">
+            Receive thoughtful guidance
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Timeless Gita principles translated into modern psychological clarity, stripped of esoteric complexity.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] mr-1.5">local_fire_department</span>
+<span>Ancient intellect for modern dilemmas</span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="group relative p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-headline-md text-headline-md text-secondary/40 font-normal">03</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[20px]">footprint</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2.5">
+            Take your next step
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Receive clear, grounded, actionable direction for immediate practice—tangible steps you can apply in minutes.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] mr-1.5">task_alt</span>
+<span>Action without attachment</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Gita Wisdom Reimagined for Today -->
+<section class="py-space-xl bg-surface-container-low/60 border-y border-outline-variant/30" id="themes">
+<div class="max-w-6xl mx-auto px-gutter-md md:px-margin-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-2">Contemporary Dilemmas</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium">
+            Gita Wisdom, Reimagined for Today
+          </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md mt-2 md:mt-0">
+          The internal battlefield of Kurukshetra is mirrored in our everyday work, relationships, and modern anxieties.
+        </p>
+</div>
+<!-- Bento Grid for Challenges -->
+<div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+<!-- Card 1 (Span 4) -->
+<div class="md:col-span-4 p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:border-secondary/40 transition-colors">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">trending_flat</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider">Karmanye Vadhikaraste</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2">Career Uncertainty & Impostor Syndrome</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">
+            "Focus completely on your effort; free yourself from obsession with outcomes." Learn to execute high-stakes professional work without paralyzing fear of failure.
+          </p>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-body-sm font-body-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Nishkama Karma in Modern Tech & Corporate Life</span>
+</div>
+</div>
+<!-- Card 2 (Span 2) -->
+<div class="md:col-span-2 p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:border-secondary/40 transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">air</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider">Sthitaprajna</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2">Fear of Failure & Anxiety</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Cultivating the undisturbed mind—becoming like the deep ocean that absorbs all turbulent rivers without overflowing.
+            </p>
+</div>
+<span class="text-body-sm font-body-sm text-secondary mt-4 block">Quiet presence amidst chaos →</span>
+</div>
+<!-- Card 3 (Span 2) -->
+<div class="md:col-span-2 p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:border-secondary/40 transition-colors">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">diversity_3</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider">Samadarshana</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2">Relationships & Boundaries</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Seeing oneness with empathy while holding steady emotional boundaries without resentment or guilt.
+          </p>
+</div>
+<!-- Card 4 (Span 2) -->
+<div class="md:col-span-2 p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:border-secondary/40 transition-colors">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider">Buddhi Yoga</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2">Difficult Decisions</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Harnessing the serene clarity of higher discernment (Buddhi) instead of reacting to impulsive fears.
+          </p>
+</div>
+<!-- Card 5 (Span 2) -->
+<div class="md:col-span-2 p-space-lg rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-[0_4px_20px_-2px_rgba(26,20,16,0.04)] hover:border-secondary/40 transition-colors">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">bedtime</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider">Yukta Vihara</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-medium mb-2">Stress & Burnout</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Reclaiming the sacred rhythm of pause, restorative discipline, and genuine spiritual recharge.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Live Preview / How KAAL AI Guides You -->
+<section class="py-space-xl px-gutter-md md:px-margin-lg max-w-4xl mx-auto">
+<div class="text-center max-w-xl mx-auto mb-10">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest block mb-2">Architecture of Clarity</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium mb-3">
+        How KAAL AI Guides You
+      </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+        Every dialogue yields a thoughtful, 4-tier structured insight designed for immediate internal peace and outward action.
+      </p>
+</div>
+<!-- Live Preview Card Mockup -->
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 shadow-[0_12px_32px_-4px_rgba(18,27,47,0.08)] overflow-hidden">
+<!-- Simulated Query Header -->
+<div class="bg-surface-container-low px-6 py-4 border-b border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface italic">"I'm terrified of leaving my stable job to start this new venture. My family thinks I'm reckless."</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline hidden sm:inline">Seeker query #402</span>
+</div>
+<!-- 4 Structured Steps Output -->
+<div class="p-6 md:p-8 space-y-6">
+<!-- 1. Reflection -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface font-medium">
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">1. REFLECTION</span>
+<h4 class="font-headline-md text-[18px] text-on-surface">The Weight of Perceived Duty vs. Inner Calling</h4>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant pl-4 border-l-2 border-outline-variant/40 leading-relaxed">
+            Your family’s worry stems from protection, not malice. However, fear often masquerades as practical logic. You are carrying not just your own uncertainty, but the inherited anxieties of those who love you.
+          </p>
+</div>
+<!-- 2. Gita Wisdom (Parchment Card with Gold Accent) -->
+<div class="p-5 rounded-xl bg-[#FAF6EE] border border-secondary/30 relative">
+<div class="flex items-center gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-label-sm font-label-sm tracking-wider uppercase">2. GITA WISDOM • CHAPTER 3, VERSE 35</span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface mb-2 italic">
+            "Better is one's own duty (Svadharma), though devoid of merit, than the duty of another well performed."
+          </blockquote>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+            Living another person’s safe script breeds silent inner decay. Courage isn't guaranteed triumph; it is answering what is uniquely yours to build.
+          </p>
+</div>
+<!-- 3. In Your Situation -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface font-medium">
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-secondary">3. IN YOUR SITUATION</span>
+<h4 class="font-headline-md text-[18px] text-on-surface">Separating Responsibility from Reassurance</h4>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant pl-4 border-l-2 border-outline-variant/40 leading-relaxed">
+            Do not demand immediate agreement from those who value predictability. Provide them calm clarity rather than frantic defenses. Ground your decision in quiet preparation, not reckless rebellion.
+          </p>
+</div>
+<!-- 4. Your Next Step -->
+<div class="p-4 rounded-xl bg-surface-container border border-outline-variant/50 flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider block mb-1">4. YOUR IMMEDIATE PRACTICE</span>
+<p class="text-body-md font-body-md text-on-surface font-medium">
+              "Before your next conversation with them, take a 10-minute quiet walk without your phone. Acknowledge their fear aloud to yourself, then speak from steady presence, not defensive urgency."
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Interactive Input / Begin Your Reflection -->
+<section class="py-space-xl bg-gradient-to-b from-surface to-surface-container-low border-t border-outline-variant/30" id="reflect-form">
+<div class="max-w-2xl mx-auto px-gutter-md md:px-gutter-lg text-center">
+<div class="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">self_improvement</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium mb-3">
+        Begin Your Reflection
+      </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">
+        What question, decision, or quiet unrest is holding your mind today?
+      </p>
+<!-- Interactive Input Module -->
+<div class="bg-surface-container-lowest p-4 md:p-6 rounded-2xl border border-outline-variant/40 shadow-sm text-left">
+<label class="block text-label-sm font-label-sm text-outline uppercase tracking-wider mb-2" for="seeker-prompt">
+          Your Contemplation
+        </label>
+<textarea class="w-full bg-surface-container-low/50 border-0 rounded-xl p-3.5 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-secondary/40 resize-none transition-all" id="seeker-prompt" placeholder="E.g., I have an upcoming meeting where I must confront someone I respect, but I feel overwhelming guilt..." rows="3"></textarea>
+<!-- Suggested Prompt Chips -->
+<div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-outline-variant/20">
+<span class="text-body-sm font-body-sm text-outline text-[12px]">Try asking about:</span>
+<button class="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Career Crossroad</button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Overcoming Resentment</button>
+<button class="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Finding Stillness</button>
+</div>
+<div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-outline text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Your reflections are private, encrypted, and yours.</span>
+</div>
+<button class="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md hover:bg-on-surface active:scale-95 transition-all" type="button">
+<span>Receive Guidance</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Inspirational Reflection Quote -->
+<section class="py-space-xl px-gutter-md md:px-margin-lg text-center bg-surface-container-lowest" id="reflection">
+<div class="max-w-2xl mx-auto">
+<div class="w-8 h-px bg-secondary/40 mx-auto mb-6"></div>
+<blockquote class="font-quote-editorial text-quote-editorial md:text-[24px] text-on-surface leading-relaxed mb-4">
+        "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action."
+      </blockquote>
+<cite class="text-label-md font-label-md text-secondary tracking-widest block not-italic">
+        — BHAGAVAD GITA 2.47
+      </cite>
+<div class="w-8 h-px bg-secondary/40 mx-auto mt-6"></div>
+</div>
+</section>
+<!-- Footer (Shared Footer Component) -->
+<footer class="w-full py-space-xl px-gutter-md md:px-margin-lg flex flex-col items-center justify-center gap-space-md text-center max-w-7xl mx-auto bg-surface-container-low dark:bg-surface-container-high border-t border-outline-variant/40 dark:border-outline/20">
+<div class="flex items-center gap-2">
+<img alt="KAAL AI Wordmark and Emblem" class="w-6 h-6 rounded-md object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UtifwEzwv8b_LXHXogTdIisDgjfhgfKaWhF-4P-TM3p2f4laR16t75k4sBu94uhLMplPm47zB3Yby5rAAJtqBBankH0RjBMMUfdCeTRXHAmJDCpaEdSuwOyNGnNwKnhfmBO7V9ymSysP5eEt7cum64bSxLzcqiXq1LJFgfMV_6yz-7wA_ftbXSrzAShKtJj4x9Q3iZv6_nhBfivlJPAAEed3Kg_NOh1jEju6zrqzAOpJperI9AtC1opLI"/>
+<span class="font-headline-md text-headline-md text-on-surface dark:text-on-surface font-medium">KAAL AI</span>
+</div>
+<!-- Navigation links from JSON -->
+<div class="flex flex-wrap items-center justify-center gap-6 my-2">
+<a class="text-on-surface-variant dark:text-outline text-body-sm font-body-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Sutras</a>
+<a class="text-on-surface-variant dark:text-outline text-body-sm font-body-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Philosophy</a>
+<a class="text-on-surface-variant dark:text-outline text-body-sm font-body-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Meditation</a>
+<a class="text-on-surface-variant dark:text-outline text-body-sm font-body-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Privacy</a>
+<a class="text-on-surface-variant dark:text-outline text-body-sm font-body-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Terms</a>
+</div>
+<p class="text-body-sm font-body-sm text-outline">
+      © 2025 KAAL AI. Ancient wisdom. Modern clarity.
+    </p>
+</footer>
+<!-- BottomNavBar (Shared BottomNavBar Component - Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-2 md:hidden bg-surface/90 dark:bg-surface-container-low/90 backdrop-blur-lg border-t border-outline-variant/30 dark:border-outline/20 shadow-[0_-4px_20px_-2px_rgba(26,20,16,0.04)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-bold py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<!-- Guidance (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-90" href="#reflect-form">
+<span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+<span class="text-label-sm font-label-sm mt-0.5">Guidance</span>
+</a>
+<!-- History (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+<span class="text-label-sm font-label-sm mt-0.5">History</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</body></html>

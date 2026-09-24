@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KAAL AI — Return to Your Sanctuary</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#ffb5a1",
+            "secondary-container": "#ffc16a",
+            "on-tertiary-fixed-variant": "#79301c",
+            "secondary-fixed-dim": "#f9bb65",
+            "primary-fixed-dim": "#c1c6db",
+            "surface-variant": "#e4e2df",
+            "inverse-primary": "#c1c6db",
+            "secondary": "#825500",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f5f3f0",
+            "surface-dim": "#dbdad7",
+            "on-tertiary-fixed": "#3b0800",
+            "surface-container-high": "#eae8e5",
+            "on-secondary": "#ffffff",
+            "on-background": "#1b1c1a",
+            "on-tertiary-container": "#c56b52",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#45464c",
+            "primary-container": "#151b2b",
+            "background": "#fbf9f6",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "outline": "#76777d",
+            "surface": "#fbf9f6",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "tertiary-container": "#3b0800",
+            "on-secondary-fixed": "#291800",
+            "on-secondary-fixed-variant": "#633f00",
+            "primary": "#000000",
+            "on-primary-fixed-variant": "#414658",
+            "outline-variant": "#c6c6cd",
+            "on-primary-container": "#7e8397",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f2f0ed",
+            "surface-container-highest": "#e4e2df",
+            "tertiary-fixed": "#ffdbd1",
+            "tertiary": "#000000",
+            "on-error": "#ffffff",
+            "surface-container": "#efeeeb",
+            "surface-bright": "#fbf9f6",
+            "primary-fixed": "#dde2f7",
+            "on-secondary-container": "#774d00",
+            "inverse-surface": "#30312f",
+            "surface-tint": "#585e70",
+            "on-primary-fixed": "#151b2b",
+            "secondary-fixed": "#ffddb4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "margin-md": "2rem",
+            "margin-lg": "4rem",
+            "gutter-lg": "2rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1.25rem",
+            "space-xl": "2.5rem",
+            "gutter-md": "1.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "quote-editorial": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "quote-editorial": ["20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    
+    .mandala-pattern {
+      background-image: radial-gradient(circle at center, rgba(212, 155, 72, 0.12) 0%, rgba(212, 155, 72, 0.03) 45%, transparent 70%);
+    }
+
+    .candlelight-shadow {
+      box-shadow: 0 4px 20px -2px rgba(26, 20, 16, 0.04), 0 1px 3px 0 rgba(26, 20, 16, 0.02);
+    }
+
+    .candlelight-elevation-interactive {
+      box-shadow: 0 12px 32px -4px rgba(18, 27, 47, 0.08), 0 4px 12px -2px rgba(212, 155, 72, 0.06);
+    }
+
+    .gold-glow {
+      box-shadow: 0 0 20px rgba(212, 155, 72, 0.28);
+    }
+    
+    .input-ambient-glow:focus-within {
+      box-shadow: 0 0 0 3px rgba(212, 155, 72, 0.18);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased h-full flex flex-col justify-between selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Main Split-Screen Container -->
+<div class="min-h-screen flex flex-col lg:flex-row w-full relative">
+<!-- LEFT COLUMN: Cinematic Spiritual Visual Canvas (Desktop 45% - 50%, hidden or banner on mobile) -->
+<section class="relative lg:w-5/12 xl:w-1/2 flex flex-col justify-between overflow-hidden bg-primary-container text-surface min-h-[300px] lg:min-h-screen">
+<!-- Background Temple Dawn Image with Rich Atmospheric Multi-layer Gradient -->
+<div class="absolute inset-0 z-0">
+<img alt="Atmospheric temple reflection at dawn" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 transform scale-105 transition-transform duration-1000 ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida/AEtjO1VUP-lnHufxoQL1bC3_BbQDPcZjsxa_qef2vv7GwfJO7sIcJYYCDTh6K3YBT_U95hpuS9KuvOEUwg2yaiQjs34srUFwCqaTC0GWi65kxM7zI-A3sOXHb_dQiubWvdj_Hc-CkNMrhCzMouGWaxW9ak2w0ai2VAgG6GyaI68nsYe0PLRgN5-6t67Y8op_FTahhgYXlAOhpTjXW4zVzviXIsIsRF_5wch6VBJe98uDyd5VeMwLfo-rQXvrnH4"/>
+<!-- Depth Gradient Overlays: Deep Midnight Indigo & Antique Amber Glow -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#0d1322] via-[#0d1322]/65 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0d1322]/80 via-transparent to-[#0d1322]/50"></div>
+<div class="absolute inset-0 mandala-pattern pointer-events-none"></div>
+</div>
+<!-- Sacred Geometry / Mandala Watermark SVG (diffused top-right) -->
+<div class="absolute -top-16 -right-16 w-80 h-80 opacity-15 pointer-events-none text-secondary-fixed">
+<svg class="w-full h-full animate-[spin_120s_linear_infinite]" fill="none" stroke="currentColor" stroke-width="0.75" viewbox="0 0 200 200">
+<circle cx="100" cy="100" r="90" stroke-dasharray="2 3"></circle>
+<circle cx="100" cy="100" r="70"></circle>
+<circle cx="100" cy="100" r="50" stroke-dasharray="4 2"></circle>
+<circle cx="100" cy="100" r="30"></circle>
+<path d="M100 10 L100 190 M10 100 L190 100 M36 36 L164 164 M36 164 L164 36"></path>
+<polygon points="100,20 180,100 100,180 20,100"></polygon>
+<polygon points="100,30 170,100 100,170 30,100"></polygon>
+</svg>
+</div>
+<!-- Left Column Header / Top Bar (Desktop) -->
+<div class="relative z-10 p-space-md lg:p-margin-md flex items-center justify-between">
+<div class="flex items-center space-x-space-sm backdrop-blur-md bg-primary-container/40 px-3.5 py-1.5 rounded-full border border-secondary-fixed/20 shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-body-lg" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-surface font-label-md text-label-sm uppercase tracking-widest text-xs">Vedic Intelligence</span>
+</div>
+</div>
+<!-- Left Column Contemplative Center Narrative -->
+<div class="relative z-10 px-space-md lg:px-margin-md py-space-xl max-w-xl">
+<div class="inline-flex items-center gap-2 mb-space-sm text-secondary-fixed-dim text-label-sm font-label-sm">
+<span class="w-6 h-px bg-secondary-fixed-dim/60"></span>
+<span>SADHANA DIGITALIS</span>
+</div>
+<h1 class="font-headline-lg lg:font-display-lg text-headline-lg lg:text-display-lg text-surface tracking-tight text-balance leading-tight drop-shadow-sm mb-space-md">
+          Pause. Reflect.<br/>Begin again.
+        </h1>
+<p class="font-body-lg text-body-lg text-surface-container-high/90 max-w-md font-light leading-relaxed">
+          Return to your personal sanctuary for stillness, clarity, and algorithmic alignment with your highest self.
+        </p>
+</div>
+<!-- Left Column Discreet Sacred Footer Quote -->
+<div class="relative z-10 p-space-md lg:p-margin-md border-t border-surface/10 bg-primary-container/50 backdrop-blur-sm">
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-secondary-container text-headline-md mt-0.5" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div>
+<p class="font-quote-editorial text-quote-editorial text-surface-bright/95 italic font-light leading-snug">
+              “Yoga is the journey of the self, through the self, to the self.”
+            </p>
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase block mt-1.5">
+              Bhagavad Gita · VI.20
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Authentication Canvas (Editorial Ivory Surface) -->
+<main class="w-full lg:w-7/12 xl:w-1/2 flex flex-col justify-between bg-surface min-h-screen px-margin sm:px-gutter-lg lg:px-margin-lg py-space-md lg:py-space-lg relative overflow-y-auto">
+<!-- Right Column Top Subtle Bar -->
+<header class="w-full flex items-center justify-between py-space-sm border-b border-surface-container pb-space-md">
+<!-- Brand Mark -->
+<a class="flex items-center space-x-3 group" href="/" title="KAAL AI Home">
+<div class="w-9 h-9 rounded-lg overflow-hidden border border-outline-variant/30 flex items-center justify-center bg-surface-container-lowest shadow-sm group-hover:border-secondary transition-colors">
+<img alt="KAAL AI mark" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UzMRVKgfrJFj2XUz8IUZ6UFOyq6D2PPEIwBEKZATlsagbj6nObIYKungxOXCYtj3U_nHo2hCOqnga82nKZQvtN93-Zsfg8wv9RQsyUXK_mifr5KhtYjdQGeMbOgpZFF2Zii88XOK_n737En1qzxv0g6K8jqSsFxBaqdbE86ULubBQolr53aOjpyKhSWgDOs0DaWOINKNuAzyVmibINOK0B6d9u-xwyfd9D4QCWOugP4r9JJx12yi5U6y4"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">KAAL <span class="text-secondary font-light">AI</span></span>
+<span class="text-on-surface-variant font-label-sm text-[10px] tracking-widest uppercase">Timeless Clarity</span>
+</div>
+</a>
+<!-- Register Link -->
+<div class="flex items-center space-x-2 text-body-sm font-body-sm">
+<span class="text-on-surface-variant hidden sm:inline">New here?</span>
+<a class="text-secondary hover:text-on-secondary-container font-label-md text-label-md underline underline-offset-4 decoration-secondary/30 hover:decoration-secondary transition-all" href="/register">
+            Create account
+          </a>
+</div>
+</header>
+<!-- Center Content Area: Auth Card & Interactive States Panel -->
+<div class="w-full max-w-md mx-auto my-auto py-space-md">
+<!-- Interactive State Demonstrator Bar -->
+<div class="mb-space-lg bg-surface-container-low p-1.5 rounded-xl border border-surface-container-high shadow-xs">
+<div class="flex items-center justify-between px-2 py-1 mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block animate-pulse"></span>
+              Interactive State Switcher
+            </span>
+<span class="text-[10px] font-label-sm text-on-surface-variant/70">Click tabs to inspect</span>
+</div>
+<div aria-label="Auth States" class="grid grid-cols-4 gap-1 text-center" role="tablist">
+<button class="state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-xs font-semibold" id="btn-state-default" onclick="setAuthState('default')">
+              Default
+            </button>
+<button class="state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="btn-state-val-error" onclick="setAuthState('val-error')">
+              Validation
+            </button>
+<button class="state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="btn-state-invalid-cred" onclick="setAuthState('invalid-cred')">
+              Invalid Cred
+            </button>
+<button class="state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="btn-state-loading" onclick="setAuthState('loading')">
+              Loading
+            </button>
+</div>
+</div>
+<!-- Sacred Sanctuary Badge -->
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-secondary-fixed/30 border border-secondary/20 text-on-secondary-fixed-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>SACRED SANCTUARY</span>
+</span>
+<span class="h-px flex-1 bg-surface-container"></span>
+</div>
+<!-- Form Headings -->
+<div class="mb-space-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight font-medium">
+            Welcome back.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Return to your space for reflection.
+          </p>
+</div>
+<!-- Global Simulated Banner: Invalid Credentials (Amber/Terracotta calm tone) -->
+<div class="hidden mb-space-md p-space-sm rounded-xl bg-[#faeae4] border border-[#e5a593] transition-all duration-300" id="error-banner">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-body-lg mt-0.5">error_outline</span>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-tertiary-fixed-variant font-medium">Authentication Notice</p>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant/90 mt-0.5">
+                We couldn't sign you in with those details. Please check your email and password.
+              </p>
+</div>
+<button class="text-on-tertiary-fixed-variant hover:opacity-75" onclick="dismissBanner()" type="button">
+<span class="material-symbols-outlined text-body-md">close</span>
+</button>
+</div>
+</div>
+<!-- Authentication Form -->
+<form class="space-y-space-md" id="login-form" novalidate="" onsubmit="handleFormSubmit(event)">
+<!-- Email Input Group -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block font-label-md text-label-md text-on-surface" for="email-input">
+                Email address
+              </label>
+<span class="text-label-sm font-label-sm text-on-surface-variant hidden" id="email-helper-text">Format required</span>
+</div>
+<div class="relative rounded-xl bg-surface-container-low border border-surface-variant focus-within:border-secondary focus-within:bg-surface-container-lowest transition-all duration-200 input-ambient-glow" id="email-container">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-body-lg">mail</span>
+</div>
+<input autocomplete="email" class="w-full pl-10 pr-3.5 py-3 bg-transparent border-0 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none" id="email-input" name="email" placeholder="you@example.com" required="" type="email" value="sadhak@kaal.ai"/>
+</div>
+<p class="hidden text-error font-body-sm text-body-sm flex items-center gap-1 mt-1" id="email-error-msg">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span>Please enter a valid email address (e.g. name@domain.com).</span>
+</p>
+</div>
+<!-- Password Input Group -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block font-label-md text-label-md text-on-surface" for="password-input">
+                Password
+              </label>
+<a class="text-body-sm font-body-sm text-secondary hover:text-on-secondary-container transition-colors" href="#reset-password">
+                Forgot password?
+              </a>
+</div>
+<div class="relative rounded-xl bg-surface-container-low border border-surface-variant focus-within:border-secondary focus-within:bg-surface-container-lowest transition-all duration-200 input-ambient-glow" id="password-container">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-body-lg">key</span>
+</div>
+<input autocomplete="current-password" class="w-full pl-10 pr-11 py-3 bg-transparent border-0 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none" id="password-input" name="password" placeholder="Enter your password" required="" type="password" value="vedic-wisdom-2025"/>
+<!-- Eye Toggle Button -->
+<button aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-outline hover:text-on-surface transition-colors focus:outline-none" id="toggle-password-btn" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-body-lg" id="password-eye-icon">visibility</span>
+</button>
+</div>
+<p class="hidden text-error font-body-sm text-body-sm flex items-center gap-1 mt-1" id="password-error-msg">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span>Password must be at least 8 characters long.</span>
+</p>
+</div>
+<!-- Remember Me Checkbox -->
+<div class="flex items-center justify-between py-0.5">
+<label class="flex items-center gap-2.5 cursor-pointer group select-none">
+<input checked="" class="w-4 h-4 rounded text-primary border-outline-variant/60 focus:ring-secondary/30 transition-all cursor-pointer" id="remember-me" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Remember this quiet space</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>256-bit AES</span>
+</span>
+</div>
+<!-- Primary Submit CTA Button -->
+<button class="w-full h-12 bg-primary-container text-surface hover:text-surface-bright rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 border border-secondary-fixed/20 shadow-sm hover:shadow-md hover:scale-[1.008] active:scale-[0.98] transition-all duration-200 group" id="submit-cta" type="submit">
+<!-- Normal State Content -->
+<span class="inline-flex items-center gap-2" id="cta-normal">
+<span>Continue</span>
+<span class="material-symbols-outlined text-body-md group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</span>
+<!-- Loading State Content -->
+<span class="hidden items-center gap-2" id="cta-loading">
+<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-surface" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Signing in...</span>
+</span>
+</button>
+<!-- Divider -->
+<div class="relative py-2 flex items-center justify-center">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-surface-container"></div></div>
+<span class="relative px-3 bg-surface font-label-sm text-label-sm text-outline uppercase tracking-wider">or sign in with</span>
+</div>
+<!-- Secondary Auth Options: Passkey / Sanctum Access -->
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg border border-surface-variant hover:border-outline-variant bg-surface-container-lowest text-on-surface font-label-md text-body-sm transition-all hover:bg-surface-container-low active:scale-95" type="button">
+<span class="material-symbols-outlined text-body-lg text-secondary">fingerprint</span>
+<span>Passkey</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg border border-surface-variant hover:border-outline-variant bg-surface-container-lowest text-on-surface font-label-md text-body-sm transition-all hover:bg-surface-container-low active:scale-95" type="button">
+<span class="material-symbols-outlined text-body-lg text-outline">key_vertical</span>
+<span>SSO Token</span>
+</button>
+</div>
+</form>
+<!-- Secondary Guidance Link -->
+<div class="mt-space-md text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Don't have an account? 
+            <a class="text-secondary hover:text-on-secondary-container font-label-md font-medium underline underline-offset-4 decoration-secondary/30 ml-1" href="/register">
+              Create your account
+            </a>
+</p>
+</div>
+<!-- Sacred Trust Affirmation -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container text-center flex items-center justify-center gap-2 text-outline">
+<span class="material-symbols-outlined text-body-sm text-secondary" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">
+            Your reflections are personal to you and quietly encrypted.
+          </span>
+</div>
+</div>
+<!-- Right Column Footer: Minimalist Sanctuary Footer -->
+<footer class="w-full pt-space-lg pb-space-sm border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-on-surface-variant text-body-sm font-body-sm gap-2">
+<p class="text-[12px] text-outline">
+          © 2025 KAAL AI. Ancient wisdom. Modern clarity.
+        </p>
+<nav aria-label="Footer legal" class="flex items-center space-x-4 text-[12px] text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="#privacy">Privacy</a>
+<span class="text-outline-variant">·</span>
+<a class="hover:text-secondary transition-colors" href="#terms">Terms</a>
+<span class="text-outline-variant">·</span>
+<a class="hover:text-secondary transition-colors" href="#sutras">Sutras</a>
+<span class="text-outline-variant">·</span>
+<a class="hover:text-secondary transition-colors" href="#contact">Contact</a>
+</nav>
+</footer>
+</main>
+</div>
+<!-- Inline Vanilla Script for State Demonstration & Password Toggle -->
+<script>
+    // State Switcher Logic for interactive reviewer inspection
+    function setAuthState(state) {
+      // Reset button styles
+      const tabs = ['default', 'val-error', 'invalid-cred', 'loading'];
+      tabs.forEach(tab => {
+        const btn = document.getElementById(`btn-state-${tab}`);
+        if (btn) {
+          if (tab === state) {
+            btn.className = 'state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-xs font-semibold';
+          } else {
+            btn.className = 'state-tab-btn py-1.5 px-2 rounded-lg text-label-sm font-label-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+          }
+        }
+      });
+
+      // Target elements
+      const emailContainer = document.getElementById('email-container');
+      const passwordContainer = document.getElementById('password-container');
+      const emailError = document.getElementById('email-error-msg');
+      const passwordError = document.getElementById('password-error-msg');
+      const errorBanner = document.getElementById('error-banner');
+      const ctaNormal = document.getElementById('cta-normal');
+      const ctaLoading = document.getElementById('cta-loading');
+      const submitBtn = document.getElementById('submit-cta');
+
+      // Clear previous error states
+      emailContainer.classList.remove('border-error', 'bg-[#fef4f3]');
+      passwordContainer.classList.remove('border-error', 'bg-[#fef4f3]');
+      emailError.classList.add('hidden');
+      passwordError.classList.add('hidden');
+      errorBanner.classList.add('hidden');
+      ctaNormal.classList.remove('hidden');
+      ctaLoading.classList.add('hidden');
+      ctaLoading.classList.remove('flex');
+      submitBtn.disabled = false;
+
+      if (state === 'val-error') {
+        // Validation Error State
+        emailContainer.classList.add('border-error', 'bg-[#fef4f3]');
+        passwordContainer.classList.add('border-error', 'bg-[#fef4f3]');
+        emailError.classList.remove('hidden');
+        passwordError.classList.remove('hidden');
+        document.getElementById('email-input').value = 'invalid-email-format';
+        document.getElementById('password-input').value = '123';
+      } else if (state === 'invalid-cred') {
+        // Invalid credentials banner state
+        errorBanner.classList.remove('hidden');
+        document.getElementById('email-input').value = 'seeker@himalaya.org';
+        document.getElementById('password-input').value = 'wrongpassword123';
+      } else if (state === 'loading') {
+        // Loading state
+        ctaNormal.classList.add('hidden');
+        ctaLoading.classList.remove('hidden');
+        ctaLoading.classList.add('flex');
+        submitBtn.disabled = true;
+      } else {
+        // Default state
+        document.getElementById('email-input').value = 'sadhak@kaal.ai';
+        document.getElementById('password-input').value = 'vedic-wisdom-2025';
+      }
+    }
+
+    // Dismiss banner
+    function dismissBanner() {
+      document.getElementById('error-banner').classList.add('hidden');
+    }
+
+    // Toggle password eye visibility
+    function togglePasswordVisibility() {
+      const passInput = document.getElementById('password-input');
+      const eyeIcon = document.getElementById('password-eye-icon');
+      
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        eyeIcon.textContent = 'visibility_off';
+      } else {
+        passInput.type = 'password';
+        eyeIcon.textContent = 'visibility';
+      }
+    }
+
+    // Simulated form submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      setAuthState('loading');
+      setTimeout(() => {
+        setAuthState('default');
+        alert('Welcome back to KAAL AI. Aligning today\'s contemplation stream.');
+      }, 1400);
+    }
+  </script>
+</body></html>
