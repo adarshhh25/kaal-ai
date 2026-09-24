@@ -47,53 +47,53 @@ Follow these steps to set up the project locally.
 - A Groq API Key (You can get one at [console.groq.com](https://console.groq.com/))
 
 ### 2. Clone the Repository
-\`\`\`bash
+```bash
 git clone <your-repo-url>
 cd Kaalai
-\`\`\`
+```
 
 ### 3. Backend Setup
 Navigate to the \`backend\` directory and install dependencies:
-\`\`\`bash
+```bash
 cd backend
 npm install
-\`\`\`
+```
 
 Create a \`.env\` file in the \`backend\` folder with the following variables:
-\`\`\`env
+```env
 PORT=5000
 DATABASE_URL="postgresql://<user>:<password>@localhost:5432/kaalai?schema=public"
 JWT_SECRET="your-super-secret-jwt-key"
 GROQ_API_KEY="your-groq-api-key"
 FRONTEND_URL="http://localhost:5173"
-\`\`\`
+```
 
 Run Prisma migrations to set up your database schema:
-\`\`\`bash
+```bash
 npx prisma migrate dev --name init
-\`\`\`
+```
 
 Start the backend development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 ### 4. Frontend Setup
 Open a new terminal, navigate to the \`frontend\` directory, and install dependencies:
-\`\`\`bash
+```bash
 cd frontend
 npm install
-\`\`\`
+```
 
 Create a \`.env\` file in the \`frontend\` folder:
-\`\`\`env
+```env
 VITE_API_URL=http://localhost:5000/api/v1
-\`\`\`
+```
 
 Start the frontend Vite development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 ### 5. Access the App
 The application should now be running. 
@@ -104,7 +104,7 @@ The application should now be running.
 
 ## 📂 Project Structure
 
-\`\`\`
+```
 Kaalai/
 │
 ├── backend/
@@ -135,7 +135,7 @@ Kaalai/
     │   ├── App.tsx         # Root component
     │   ├── main.tsx        # React DOM entry point
     │   └── style.css       # Global styling and Tailwind directives
-\`\`\`
+```
 
 ---
 
