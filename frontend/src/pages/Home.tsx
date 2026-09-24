@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 import Header from '../components/Header';
 
 export default function Home() {
-  const { isAuthenticated, user } = useAuth();
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   

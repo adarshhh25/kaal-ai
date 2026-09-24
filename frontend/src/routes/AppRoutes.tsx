@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import AppLayout from '../layouts/AppLayout';
 import ProtectedLayout from '../layouts/ProtectedLayout';
 
 // Pages
