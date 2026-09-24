@@ -9,7 +9,7 @@ export const validateRequest = (schema: ZodObject<any, any>) => {
       next();
     } catch (error) {
       if (error instanceof ZodError) {
-        return sendError(res, 422, 'VALIDATION_ERROR', 'Invalid request', (error as ZodError).errors);
+        return sendError(res, 422, 'VALIDATION_ERROR', 'Invalid request', (error as any).errors);
       }
       next(error);
     }
@@ -23,7 +23,7 @@ export const validateQuery = (schema: ZodObject<any, any>) => {
       next();
     } catch (error) {
       if (error instanceof ZodError) {
-        return sendError(res, 422, 'VALIDATION_ERROR', 'Invalid request query', (error as ZodError).errors);
+        return sendError(res, 422, 'VALIDATION_ERROR', 'Invalid request query', (error as any).errors);
       }
       next(error);
     }
