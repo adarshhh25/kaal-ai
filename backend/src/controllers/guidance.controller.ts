@@ -35,7 +35,7 @@ export const guidanceController = {
   async getOne(req: Request, res: Response, next: NextFunction) {
     try {
       const userId = req.user!.userId;
-      const { id } = req.params;
+      const { id } = req.params as { id: string };
       const result = await guidanceService.getGuidanceById(userId, id);
       sendSuccess(res, 200, result);
     } catch (error) {
@@ -46,7 +46,7 @@ export const guidanceController = {
   async delete(req: Request, res: Response, next: NextFunction) {
     try {
       const userId = req.user!.userId;
-      const { id } = req.params;
+      const { id } = req.params as { id: string };
       const result = await guidanceService.deleteGuidance(userId, id);
       sendSuccess(res, 200, result);
     } catch (error) {
