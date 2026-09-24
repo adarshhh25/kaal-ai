@@ -110,23 +110,31 @@ Kaalai/
 ├── backend/
 │   ├── prisma/             # Database schema and migrations
 │   ├── src/
+│   │   ├── config/         # Environment variables and configuration
 │   │   ├── controllers/    # Route controllers (Auth, Guidance)
 │   │   ├── middleware/     # Auth checks, validation, error handling
 │   │   ├── repositories/   # Prisma database queries
 │   │   ├── routes/         # Express routing definitions
 │   │   ├── services/       # Business logic (Groq API integration)
-│   │   └── index.ts        # Server entry point
+│   │   ├── types/          # TypeScript interfaces and type definitions
+│   │   ├── utils/          # Helper functions and utilities
+│   │   ├── validators/     # Input validation schemas
+│   │   ├── app.ts          # Express application setup
+│   │   └── server.ts       # Server entry point
 │
 └── frontend/
     ├── public/             # Static assets
     ├── src/
+    │   ├── assets/         # Images, icons, and static files
     │   ├── components/     # Reusable UI components
     │   ├── context/        # React Context (AuthContext)
     │   ├── layouts/        # Protected routing and shell layouts
     │   ├── pages/          # Full page views (Home, Guidance, Auth)
+    │   ├── routes/         # Application routing definitions
     │   ├── services/       # API fetch wrappers
     │   ├── App.tsx         # Root component
-    │   └── index.css       # Global styling and Tailwind directives
+    │   ├── main.tsx        # React DOM entry point
+    │   └── style.css       # Global styling and Tailwind directives
 \`\`\`
 
 ---
