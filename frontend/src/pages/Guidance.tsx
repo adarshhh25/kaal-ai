@@ -48,6 +48,18 @@ export default function Guidance() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [activeGuidance, isLoading]);
 
+  // Prevent background scrolling on mobile when history sidebar is open
+  useEffect(() => {
+    if (isMobileHistoryOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileHistoryOpen]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;

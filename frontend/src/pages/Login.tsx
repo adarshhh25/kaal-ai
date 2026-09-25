@@ -97,12 +97,21 @@ export default function Login() {
 
 <header className="w-full flex items-center justify-between py-space-sm border-b border-surface-container pb-space-md">
 
-<Link className="flex items-center space-x-3 group" to="/" title="KAAL AI Home">
-<div className="flex flex-col">
-<span className="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">KAAL <span className="text-secondary font-light">AI</span></span>
-<span className="text-on-surface-variant font-label-sm text-[10px] tracking-widest uppercase">Timeless Clarity</span>
+<div className="flex items-center gap-1 sm:gap-3">
+  <button 
+    onClick={() => navigate(-1)} 
+    className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface shrink-0"
+    aria-label="Go back"
+  >
+    <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+  </button>
+  <Link className="flex items-center space-x-3 group" to="/" title="KAAL AI Home">
+  <div className="flex flex-col">
+  <span className="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">KAAL <span className="text-secondary font-light">AI</span></span>
+  <span className="text-on-surface-variant font-label-sm text-[10px] tracking-widest uppercase">Timeless Clarity</span>
+  </div>
+  </Link>
 </div>
-</Link>
 
 <div className="flex items-center space-x-2 text-body-sm font-body-sm">
 <span className="text-on-surface-variant hidden sm:inline">New here?</span>

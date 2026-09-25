@@ -112,9 +112,18 @@ export default function Signup() {
         <section className="w-full lg:w-7/12 xl:w-1/2 bg-surface flex flex-col justify-between p-6 sm:p-10 lg:p-14 xl:px-20 overflow-y-auto">
 
           <header className="flex items-center justify-between w-full max-w-xl mx-auto mb-8 sm:mb-12 py-space-sm border-b border-surface-container pb-space-md">
-            <Link className="group flex items-center gap-3 active:scale-95 transition-transform duration-150" to="/">
-              <span className="font-headline-md text-headline-md font-medium tracking-tight text-on-surface">KAAL AI</span>
-            </Link>
+            <div className="flex items-center gap-1 sm:gap-3">
+              <button 
+                onClick={() => navigate(-1)} 
+                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant hover:text-on-surface shrink-0"
+                aria-label="Go back"
+              >
+                <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+              </button>
+              <Link className="group flex items-center gap-3 active:scale-95 transition-transform duration-150" to="/">
+                <span className="font-headline-md text-headline-md font-medium tracking-tight text-on-surface">KAAL AI</span>
+              </Link>
+            </div>
             <div className="flex items-center gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
               <span>Already a member?</span>
               <Link className="font-label-md text-label-md text-secondary hover:text-on-secondary-fixed-variant transition-colors underline underline-offset-4 decoration-secondary/30 hover:decoration-secondary" to="/login">
