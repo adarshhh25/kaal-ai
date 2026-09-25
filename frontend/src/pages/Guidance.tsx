@@ -298,7 +298,7 @@ export default function Guidance() {
                     }
                   }}
                   placeholder="Speak honestly without judgment..."
-                  className="flex-1 max-h-32 min-h-[44px] bg-transparent border-0 px-3 py-2.5 font-body-md text-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none resize-none custom-scrollbar"
+                  className="flex-1 max-h-32 min-h-[44px] bg-transparent border-0 px-3 py-2.5 font-body-sm sm:font-body-md text-body-sm sm:text-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none resize-none custom-scrollbar"
                   rows={1}
                 />
                 <button 

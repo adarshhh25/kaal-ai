@@ -235,45 +235,6 @@ export default function Home() {
 </section>
 
 
-
-{/* <section className="py-space-xl bg-gradient-to-b from-surface to-surface-container-low border-t border-outline-variant/30" id="reflect-form">
-<div className="max-w-2xl mx-auto px-gutter-md md:px-gutter-lg text-center">
-<div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
-<span className="material-symbols-outlined text-[24px]">self_improvement</span>
-</div>
-<h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium mb-3">
-        Begin Your Reflection
-      </h2>
-<p className="text-body-md font-body-md text-on-surface-variant mb-8">
-        What question, decision, or quiet unrest is holding your mind today?
-      </p>
-
-<div className="bg-surface-container-lowest p-4 md:p-6 rounded-2xl border border-outline-variant/40 shadow-sm text-left">
-<label className="block text-label-sm font-label-sm text-outline uppercase tracking-wider mb-2" htmlFor="seeker-prompt">
-          Your Contemplation
-        </label>
-<textarea className="w-full bg-surface-container-low/50 border-0 rounded-xl p-3.5 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-2 focus:ring-secondary/40 resize-none transition-all" id="seeker-prompt" placeholder="E.g., I have an upcoming meeting where I must confront someone I respect, but I feel overwhelming guilt..." rows={3}></textarea>
-
-<div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-outline-variant/20">
-<span className="text-body-sm font-body-sm text-outline text-[12px]">Try asking about:</span>
-<button className="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Career Crossroad</button>
-<button className="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Overcoming Resentment</button>
-<button className="px-3 py-1 rounded-full bg-surface-container text-body-sm font-body-sm text-on-surface hover:bg-secondary-fixed/50 transition-colors" type="button">Finding Stillness</button>
-</div>
-<div className="mt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-<div className="flex items-center gap-2 text-outline text-body-sm font-body-sm">
-<span className="material-symbols-outlined text-[16px]">lock</span>
-<span>Your reflections are private, encrypted, and yours.</span>
-</div>
-<button className="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md hover:bg-on-surface active:scale-95 transition-all" type="button">
-<span>Receive Guidance</span>
-<span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</section> */}
-
 <section className="py-space-xl px-gutter-md md:px-margin-lg text-center bg-surface-container-lowest" id="reflection">
 <div className="max-w-2xl mx-auto">
 <div className="w-8 h-px bg-secondary/40 mx-auto mb-6"></div>
@@ -289,7 +250,6 @@ export default function Home() {
 
 <footer className="w-full py-space-xl px-gutter-md md:px-margin-lg flex flex-col items-center justify-center gap-space-md text-center max-w-7xl mx-auto bg-surface-container-low dark:bg-surface-container-high border-t border-outline-variant/40 dark:border-outline/20">
 <div className="flex items-center gap-2">
-<img alt="KAAL AI Wordmark and Emblem" className="w-6 h-6 rounded-md object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UtifwEzwv8b_LXHXogTdIisDgjfhgfKaWhF-4P-TM3p2f4laR16t75k4sBu94uhLMplPm47zB3Yby5rAAJtqBBankH0RjBMMUfdCeTRXHAmJDCpaEdSuwOyNGnNwKnhfmBO7V9ymSysP5eEt7cum64bSxLzcqiXq1LJFgfMV_6yz-7wA_ftbXSrzAShKtJj4x9Q3iZv6_nhBfivlJPAAEed3Kg_NOh1jEju6zrqzAOpJperI9AtC1opLI"/>
 <span className="font-headline-md text-headline-md text-on-surface dark:text-on-surface font-medium">KAAL AI</span>
 </div>
 
