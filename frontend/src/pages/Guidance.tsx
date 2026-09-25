@@ -136,7 +136,7 @@ export default function Guidance() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-surface overflow-hidden">
+    <div className="fixed inset-0 flex flex-col bg-surface overflow-hidden">
       {/* Header */}
       <Header />
 
