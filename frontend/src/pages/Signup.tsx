@@ -31,7 +31,7 @@ export default function Signup() {
     setIsLoading(true);
     setError(null);
     try {
-      const res = await authApi.register({ name, email, password });
+      const res = await authApi.register({ name, email, password, confirmPassword });
       login(res.data.token, res.data.user);
       navigate('/', { replace: true });
     } catch (err: any) {

@@ -10,6 +10,7 @@ import authRoutes from './routes/auth.routes';
 import guidanceRoutes from './routes/guidance.routes';
 
 const app: Express = express();
+app.set('trust proxy', 1);
 
 // Security Middleware
 app.use(helmet());
